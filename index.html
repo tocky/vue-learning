@@ -6,7 +6,18 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <p>{{ message }}</p>
+      <ol>
+        <li v-for="item in list">{{ item }}</li>
+      </ol>
+      <button v-on:click="handleClick">Click</button>
+      <input v-model="message">
+      <button v-on:click="show=!show">Switch</button>
+      <transition>
+        <p v-if="show">Hello Vue.js!</p>
+      </transition>
+    </div>
     <script src="//cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
