@@ -8,6 +8,7 @@
   <body>
     <div id="app">
       <p>{{ message }}</p>
+      <input type="text" name="" id="" :value="message">
       <ol>
         <li v-for="item in list">{{ item }}</li>
       </ol>
@@ -17,6 +18,12 @@
       <transition>
         <p v-if="show">Hello Vue.js!</p>
       </transition>
+      <div>
+        <p>Clicked count: {{ count }}</p>
+        <button v-on:click="increment">Increment the count</button>
+      </div>
+      <hr>
+      <pre>{{ $data }}</pre>
     </div>
     <script src="//cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
